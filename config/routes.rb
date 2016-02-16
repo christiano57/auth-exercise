@@ -12,5 +12,8 @@ Rails.application.routes.draw do
   post '/users' => 'users#create'
   get '/profile' => 'users#show'
   get '/users' => 'users#index'
+  get '/login' => 'sessions#new' # display the login form
+  post '/login' => 'sessions#create' # log in
+  delete '/logout' => 'sessions#destroy' # log out
 
 end
